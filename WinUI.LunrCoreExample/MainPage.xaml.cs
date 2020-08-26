@@ -23,20 +23,29 @@ namespace WinUI.LunrCoreExample
 
         private async void buttonCreateIndex_ClickAsync(object sender, RoutedEventArgs e)
         {
+            textBox.Text = string.Empty;
+
             _index = await Lunr.Index.Build(async builder =>
             {
                 builder
+                    .AddField("id")
+                    .AddField("body")
                     .AddField("title")
-                    .AddField("body");
-                await builder.Add(new Lunr.Document
+                    .AddField("author");
+                var doc = new Lunr.Document
                 {
+                    { "id", "1" },
                     { "title", "Twelfth-Night" },
                     { "body", "If music be the food of love, play on: Give me excess of it…" },
                     { "author", "William Shakespeare" },
-                    { "id", "1" },
-                });
+                };
+                await builder.Add(doc);
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                 {
+                    textBox.Text += "id: 1" + Environment.NewLine;
+                    textBox.Text += "title: Twelfth-Night" + Environment.NewLine;
+                    textBox.Text += "body: If music be the food of love, play on: Give me excess of it…" + Environment.NewLine;
+                    textBox.Text += "author: William Shakespeare" + Environment.NewLine;
                     textBox.Text += "Created index." + Environment.NewLine;
                 });
             });
