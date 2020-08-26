@@ -8,7 +8,38 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="CustomTextBlockStyle">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource CustomTextBlockStyle}" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Run Text="LunrCore example app"></Run>
+        </TextBlock>
+
+        <Button x:Name="buttonCreateIndex" Grid.Row="1" Grid.Column="0" Style="{StaticResource ButtonRevealStyle}" 
+                Content="Create index" HorizontalAlignment="Center" Click="buttonCreateIndex_ClickAsync"/>
+        <TextBox x:Name="fieldSearch" Grid.Row="1" Grid.Column="1" Margin="0 0 10 0"
+                 Header="Enter your keys:" PlaceholderText="love" />
+        <Button x:Name="buttonSearch" Grid.Row="1" Grid.Column="2" Style="{StaticResource ButtonRevealStyle}" 
+                Content="Search" HorizontalAlignment="Center" Click="buttonSearch_ClickAsync" />
+
+        <TextBox x:Name="textBox" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" IsReadOnly="True" 
+                 TextWrapping="Wrap" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+    </Grid>
 </Page>
