@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI.LunrCoreExample", "WinUI.LunrCoreExample\WinUI.LunrCoreExample.csproj", "{DE08F017-ECC5-4E86-AC86-8D61A3061444}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Debug|x64.ActiveCfg = Debug|x64
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Debug|x64.Build.0 = Debug|x64
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Debug|x64.Deploy.0 = Debug|x64
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Debug|x86.ActiveCfg = Debug|x86
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Debug|x86.Build.0 = Debug|x86
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Debug|x86.Deploy.0 = Debug|x86
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Release|x64.ActiveCfg = Release|x64
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Release|x64.Build.0 = Release|x64
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Release|x64.Deploy.0 = Release|x64
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Release|x86.ActiveCfg = Release|x86
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Release|x86.Build.0 = Release|x86
+		{DE08F017-ECC5-4E86-AC86-8D61A3061444}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4F1EBB2-BDC9-4DA8-AB7D-BB584106C489}
+	EndGlobalSection
+EndGlobal
